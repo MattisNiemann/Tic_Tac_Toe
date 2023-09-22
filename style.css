@@ -4,7 +4,7 @@ h1{
 }
 
 
-.grid{
+#grid{
     display: grid;
     grid-template-columns:300px 300px 300px;
     grid-template-rows: 300px 300px 300px 300px;
@@ -14,7 +14,7 @@ h1{
     margin: auto;
 }
 
-.cell1{
+#cell1{
     background-color: rgb(0, 80, 0);
     font-size:1000%;
     text-align:center;   
@@ -23,7 +23,7 @@ h1{
     grid-column-start: 1;
     grid-column-end: 1;
 }
-.cell2{
+#cell2{
     background-color: rgb(78, 43, 150);
     font-size:1000%;
     text-align:center;  
@@ -32,7 +32,7 @@ h1{
     grid-column-start: 2;
     grid-column-end: 2;
 }
-.cell3{
+#cell3{
     background-color: rgb(132, 168, 0);
     grid-row-start: 1;
     font-size:1000%;
@@ -41,7 +41,7 @@ h1{
     grid-column-start: 3;
     grid-column-end: 3;
 }
-.cell4{
+#cell4{
     background-color: rgb(87, 207, 255);
     font-size:1000%;
     text-align:center;  
@@ -51,7 +51,7 @@ h1{
     grid-column-end: 1;
 }
 
-.cell5{
+#cell5{
     background-color: rgb(75, 7, 69);
     font-size:1000%;
     text-align:center;  
@@ -60,7 +60,7 @@ h1{
     grid-column-start: 2;
     grid-column-end: 2;
 }
-.cell6{
+#cell6{
     background-color: rgb(241, 202, 25);
     font-size:1000%;
     text-align:center;  
@@ -70,7 +70,7 @@ h1{
     grid-column-end: 3;
 }
 
-.cell7{
+#cell7{
     background-color: rgb(255, 0, 0);
     font-size:1000%;
     text-align:center;  
@@ -79,7 +79,7 @@ h1{
     grid-column-start: 1;
     grid-column-end: 1;
 }
-.cell8{
+#cell8{
     background-color: rgb(189, 143, 183);
     font-size:1000%;
     text-align:center;  
@@ -88,7 +88,7 @@ h1{
     grid-column-start: 2;
     grid-column-end: 2;
 }
-.cell9{
+#cell9{
     background-color: rgb(0, 55, 128);
     font-size:1000%;
     text-align:center;  
