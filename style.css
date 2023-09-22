@@ -3,6 +3,7 @@ h1{
     font-size: 100px;
 }
 
+
 .grid{
     display: grid;
     grid-template-columns:300px 300px 300px;
@@ -96,4 +97,5 @@ h1{
     grid-column-start: 3;
     grid-column-end: 3;
 }
+
 
