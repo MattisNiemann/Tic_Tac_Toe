@@ -1,4 +1,5 @@
 let symbolPlaced = false;
+let gameRunning = false;
 let playerXTurn = false;
 let gameWon = false;
 let grid = [
@@ -15,27 +16,34 @@ let grid = [
 console.log(grid);
 
 function setSymbol(a) {
-  if (gameWon == false) {
-    if (grid[a] == "o" || grid[a] == "x") {
-    } else {
-      switch (playerXTurn) {
-        case false:
-          console.log("o");
-          grid[a] = "o";
-          document.getElementById("cell" + (a + 1)).innerHTML = "o";
-          detectWin();
-          playerXTurn = true;
-          break;
-        case true:
-          console.log("x");
-          grid[a] = "x";
-          document.getElementById("cell" + (a + 1)).innerHTML = "x";
-          detectWin();
-          playerXTurn = false;
-          break;
+  if (gameRunning == true) {
+    if (gameWon == false) {
+      if (grid[a] == "o" || grid[a] == "x") {
+      } else {
+        switch (playerXTurn) {
+          case false:
+            console.log("o");
+            grid[a] = "o";
+            document.getElementById("cell" + (a + 1)).innerHTML = "o";
+            detectWin();
+            playerXTurn = true;
+            break;
+          case true:
+            console.log("x");
+            grid[a] = "x";
+            document.getElementById("cell" + (a + 1)).innerHTML = "x";
+            detectWin();
+            playerXTurn = false;
+            break;
+        }
       }
     }
   }
+}
+
+// starting game
+function startGame() {
+  gameRunning = true;
 }
 
 function detectWin(gridNum) {

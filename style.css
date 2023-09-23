@@ -1,8 +1,17 @@
 h1{
     text-align: center;
     font-size: 100px;
+    text-decoration: underline;
 }
-
+#buttons{
+    text-align: center;
+}
+#start{
+   font-size: 80px;
+   }
+#reload{
+    font-size: 80px;
+    }
 
 #grid{
     display: grid;
