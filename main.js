@@ -1,4 +1,4 @@
-
+let symbolPlaced = false
 let playerXTurn = false
 let grid = [document.getElementById("cell1").innerHTML,document.getElementById("cell2").innerHTML,
         document.getElementById("cell3").innerHTML,document.getElementById("cell4").innerHTML,
@@ -9,18 +9,27 @@ let grid = [document.getElementById("cell1").innerHTML,document.getElementById("
 console.log(grid)
 
 function setSymbol(a){
-   switch (playerXTurn) {
-    case false:
-        console.log("o")
-        grid[a] = "o";
-        document.getElementById("cell"+(a+1)).innerHTML = "o";
-        playerXTurn = true
-        break
-    case true:
-        console.log("x")   
-        grid[a] = "x";
-        document.getElementById("cell"+(a+1)).innerHTML = "x";
-        playerXTurn = false
-   }
+    if (grid[a]=="o"|| grid[a]=="x") {
+    }
+    else{
+        switch (playerXTurn) {
+            case false:
+                console.log("o")
+                grid[a] = "o";
+                document.getElementById("cell"+(a+1)).innerHTML = "o";
+                playerXTurn = true
+                break
+            case true:
+                console.log("x")   
+                grid[a] = "x";
+                document.getElementById("cell"+(a+1)).innerHTML = "x";
+                playerXTurn = false
+           }
+
+
+    }
+    
+        
+
    
 }
