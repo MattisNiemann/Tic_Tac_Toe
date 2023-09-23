@@ -40,35 +40,66 @@ function setSymbol(a) {
 
 function detectWin(gridNum) {
   console.log("detecting Win...");
-
+  //detecting if O won
   for (let gridNum = 0; gridNum < 9; gridNum = gridNum + 3) {
     if (
       grid[gridNum] == "o" &&
       grid[gridNum + 1] == "o" &&
       grid[gridNum + 2] == "o"
     ) {
-      console.log("win");
+      console.log("o won");
       gameWon = true;
     }
+  }
 
-    for (let gridNum = 0; gridNum < 3; gridNum = gridNum + 1) {
-      if (
-        grid[gridNum] == "o" &&
-        grid[gridNum + 3] == "o" &&
-        grid[gridNum + 6] == "o"
-      ) {
-        console.log("win");
-        gameWon = true;
-      }
+  for (let gridNum = 0; gridNum < 3; gridNum = gridNum + 1) {
+    if (
+      grid[gridNum] == "o" &&
+      grid[gridNum + 3] == "o" &&
+      grid[gridNum + 6] == "o"
+    ) {
+      console.log("o won");
+      gameWon = true;
     }
+  }
 
-    if (grid[0] == "o" && grid[4] == "o" && grid[8] == "o") {
-      console.log("win");
+  if (grid[0] == "o" && grid[4] == "o" && grid[8] == "o") {
+    console.log("o won");
+    gameWon = true;
+  }
+  if (grid[2] == "o" && grid[4] == "o" && grid[6] == "o") {
+    console.log("o won");
+    gameWon = true;
+  }
+  //detecting if X won
+  for (let gridNum = 0; gridNum < 9; gridNum = gridNum + 3) {
+    if (
+      grid[gridNum] == "x" &&
+      grid[gridNum + 1] == "x" &&
+      grid[gridNum + 2] == "x"
+    ) {
+      console.log("x won");
       gameWon = true;
     }
-    if (grid[2] == "o" && grid[4] == "o" && grid[6] == "o") {
-      console.log("win");
+  }
+
+  for (let gridNum = 0; gridNum < 3; gridNum = gridNum + 1) {
+    if (
+      grid[gridNum] == "x" &&
+      grid[gridNum + 3] == "x" &&
+      grid[gridNum + 6] == "x"
+    ) {
+      console.log("x won");
       gameWon = true;
     }
+  }
+
+  if (grid[0] == "x" && grid[4] == "x" && grid[8] == "x") {
+    console.log("x won");
+    gameWon = true;
+  }
+  if (grid[2] == "x" && grid[4] == "x" && grid[6] == "x") {
+    console.log("x won");
+    gameWon = true;
   }
 }
