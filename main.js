@@ -13,6 +13,7 @@ let grid = [
   document.getElementById("cell8").innerHTML,
   document.getElementById("cell9").innerHTML,
 ];
+
 console.log(grid);
 
 function setSymbol(a) {
