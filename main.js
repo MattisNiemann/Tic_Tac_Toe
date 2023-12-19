@@ -81,8 +81,7 @@ oWon();
       grid[gridNum + 1] == "x" &&
       grid[gridNum + 2] == "x"
     ) {
-      console.log("x won");
-      gameWon = true;
+      xWon;
     }
   }
 
@@ -92,21 +91,23 @@ oWon();
       grid[gridNum + 3] == "x" &&
       grid[gridNum + 6] == "x"
     ) {
-      console.log("x won");
-      gameWon = true;
+      xWon;
     }
   }
 
   if (grid[0] == "x" && grid[4] == "x" && grid[8] == "x") {
-    console.log("x won");
-    gameWon = true;
+    xWon;
   }
   if (grid[2] == "x" && grid[4] == "x" && grid[6] == "x") {
-    console.log("x won");
-    gameWon = true;
+    xWon;
   }
 }
 function oWon(){
   console.log("o won");
+  gameWon = true;
+}
+
+function xWon(){
+  console.log("x won");
   gameWon = true;
 }
