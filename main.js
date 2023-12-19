@@ -46,7 +46,7 @@ function startGame() {
   gameRunning = true;
 }
 
-function detectWin(gridNum) {
+function detectWin() {
   console.log("detecting Win...");
   //detecting if O won
   for (let gridNum = 0; gridNum < 9; gridNum = gridNum + 3) {
@@ -55,8 +55,6 @@ function detectWin(gridNum) {
       grid[gridNum + 1] == "o" &&
       grid[gridNum + 2] == "o"
     ) {
-      console.log("o won");
-      gameWon = true;
     }
   }
 
@@ -66,18 +64,15 @@ function detectWin(gridNum) {
       grid[gridNum + 3] == "o" &&
       grid[gridNum + 6] == "o"
     ) {
-      console.log("o won");
-      gameWon = true;
+oWon();
     }
   }
 
   if (grid[0] == "o" && grid[4] == "o" && grid[8] == "o") {
-    console.log("o won");
-    gameWon = true;
+   oWon
   }
   if (grid[2] == "o" && grid[4] == "o" && grid[6] == "o") {
-    console.log("o won");
-    gameWon = true;
+   oWon;
   }
   //detecting if X won
   for (let gridNum = 0; gridNum < 9; gridNum = gridNum + 3) {
@@ -110,4 +105,8 @@ function detectWin(gridNum) {
     console.log("x won");
     gameWon = true;
   }
+}
+function oWon(){
+  console.log("o won");
+  gameWon = true;
 }
