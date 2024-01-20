@@ -26,14 +26,14 @@ function setSymbol(a) {
             console.log("o");
             grid[a] = "o";
             document.getElementById("cell" + (a + 1)).innerHTML = "o";
-            detectWin();
+           
             playerXTurn = true;
             break;
           case true:
             console.log("x");
             grid[a] = "x";
             document.getElementById("cell" + (a + 1)).innerHTML = "x";
-            detectWin();
+            
             playerXTurn = false;
             break;
         }
@@ -47,9 +47,7 @@ function startGame() {
   gameRunning = true;
 }
 
-function detectWin() {
-  console.log("detecting Win...");
-  //detecting if O won
+
   for (let gridNum = 0; gridNum < 9; gridNum = gridNum + 3) {
     if (
       grid[gridNum] == "o" &&
@@ -102,7 +100,7 @@ oWon();
   if (grid[2] == "x" && grid[4] == "x" && grid[6] == "x") {
     xWon;
   }
-}
+
 function oWon(){
   console.log("o won");
   gameWon = true;
