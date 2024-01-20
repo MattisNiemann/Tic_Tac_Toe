@@ -26,87 +26,99 @@ function setSymbol(a) {
             console.log("o");
             grid[a] = "o";
             document.getElementById("cell" + (a + 1)).innerHTML = "o";
-           
+            detctWin();
             playerXTurn = true;
             break;
-          case true:
-            console.log("x");
-            grid[a] = "x";
-            document.getElementById("cell" + (a + 1)).innerHTML = "x";
-            
-            playerXTurn = false;
-            break;
+            case true:
+              console.log("x");
+              grid[a] = "x";
+              document.getElementById("cell" + (a + 1)).innerHTML = "x";
+              detctWin();
+              playerXTurn = false;
+              break;
+            }
+          }
         }
       }
     }
-  }
-}
-
-// starting game
-function startGame() {
-  gameRunning = true;
-}
-
-
-  for (let gridNum = 0; gridNum < 9; gridNum = gridNum + 3) {
-    if (
-      grid[gridNum] == "o" &&
-      grid[gridNum + 1] == "o" &&
-      grid[gridNum + 2] == "o"
-    ) {
+    
+    // starting game
+    function startGame() {
+      gameRunning = true;
     }
-  }
-
-  for (let gridNum = 0; gridNum < 3; gridNum = gridNum + 1) {
-    if (
-      grid[gridNum] == "o" &&
-      grid[gridNum + 3] == "o" &&
-      grid[gridNum + 6] == "o"
-    ) {
-oWon();
-    }
-  }
-
-  if (grid[0] == "o" && grid[4] == "o" && grid[8] == "o") {
-   oWon
-  }
-  if (grid[2] == "o" && grid[4] == "o" && grid[6] == "o") {
-   oWon;
-  }
-  //detecting if X won
-  for (let gridNum = 0; gridNum < 9; gridNum = gridNum + 3) {
-    if (
-      grid[gridNum] == "x" &&
+    
+    function detctWin(){
+      
+      for (let gridNum = 0; gridNum < 9; gridNum = gridNum + 3) {
+        if (
+          grid[gridNum] == "o" &&
+          grid[gridNum + 1] == "o" &&
+          grid[gridNum + 2] == "o"
+          ) {
+            oWon();
+          }
+        }
+        
+        for (let gridNum = 0; gridNum < 3; gridNum = gridNum + 1) {
+          if (
+            grid[gridNum] == "o" &&
+            grid[gridNum + 3] == "o" &&
+            grid[gridNum + 6] == "o"
+            ) {
+              oWon();
+            }
+          }
+          
+          if (grid[0] == "o" && grid[4] == "o" && grid[8] == "o") {
+            oWon();
+          }
+          if (grid[2] == "o" && grid[4] == "o" && grid[6] == "o") {
+            oWon();
+          }
+          //detecting if X won
+          for (let gridNum = 0; gridNum < 9; gridNum = gridNum + 3) {
+            if (
+              grid[gridNum] == "x" &&
       grid[gridNum + 1] == "x" &&
       grid[gridNum + 2] == "x"
-    ) {
-      xWon;
+      ) {
+        xWon();
+      }
     }
-  }
-
-  for (let gridNum = 0; gridNum < 3; gridNum = gridNum + 1) {
-    if (
-      grid[gridNum] == "x" &&
-      grid[gridNum + 3] == "x" &&
-      grid[gridNum + 6] == "x"
-    ) {
-      xWon;
+    
+    for (let gridNum = 0; gridNum < 3; gridNum = gridNum + 1) {
+      if (
+        grid[gridNum] == "x" &&
+        grid[gridNum + 3] == "x" &&
+        grid[gridNum + 6] == "x"
+        ) {
+          xWon();
+        }
+      }
+      
+      if (grid[0] == "x" && grid[4] == "x" && grid[8] == "x") {
+        xWon();
+      }
+      if (grid[2] == "x" && grid[4] == "x" && grid[6] == "x") {
+        xWon();
+      }
     }
-  }
-
-  if (grid[0] == "x" && grid[4] == "x" && grid[8] == "x") {
-    xWon;
-  }
-  if (grid[2] == "x" && grid[4] == "x" && grid[6] == "x") {
-    xWon;
-  }
-
-function oWon(){
-  console.log("o won");
-  gameWon = true;
+    
+    
+    function oWon(){
+      console.log("o won");
+      gameWon = true;
+      gameRunning = false;
+      document.getElementById("winner").innerHTML= "o";
+  openPopup();
 }
 
 function xWon(){
   console.log("x won");
   gameWon = true;
+  gameRunning = false;
+  document.getElementById("winner").innerHTML= "x";
+  openPopup();
+  
 }
+

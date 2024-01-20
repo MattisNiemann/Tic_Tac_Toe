@@ -8,14 +8,18 @@
 </head>
 <body>
     <h1>Tic Tac Toe</h1>
+    
+    <dialog class="popup">
+      <p><span class="winner" id="winner"></span> won!</p>  
+    </dialog>
 
     <div id="grid">
     <div id="cell1" onclick=setSymbol(0) class=cells> </div>
     <div id="cell2"onclick=setSymbol(1) class=cells> </div>
     <div id="cell3"onclick=setSymbol(2) class=cells> </div>
     <div id="cell4"onclick=setSymbol(3) class=cells > </div>
-    <div id="cell5"onclick=setSymbol(4) class=cells ></div>
     <div id="cell6"onclick=setSymbol(5) class=cells ></div>
+    <div id="cell5"onclick=setSymbol(4) class=cells ></div>
     <div id="cell7"onclick=setSymbol(6) class=cells ></div>
     <div id="cell8"onclick=setSymbol(7) class=cells ></div>
     <div id="cell9"onclick=setSymbol(8) class=cells ></div>
@@ -36,4 +40,5 @@
 
 </body>
 <script src="main.js"></script>
+<script src="popup.js"></script>
 </html>

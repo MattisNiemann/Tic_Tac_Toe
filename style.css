@@ -110,5 +110,7 @@ h1{
     grid-column-start: 3;
     grid-column-end: 3;
 }
-
+.popup{
+    width: 500px;
+}
 
