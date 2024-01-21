@@ -116,6 +116,23 @@ function setSymbol(a) {
       if (grid[2] == "x" && grid[4] == "x" && grid[6] == "x") {
         xWon();
       }
+
+
+
+for (let a=0;a<10;a++){
+  if(
+
+    grid[a] == "x" || grid[a] == "o"
+    
+  )
+}
+
+
+
+
+
+
+
     }
     
     
