@@ -1,4 +1,5 @@
 const popup = document.querySelector(".popup")
+//const 
 
 
 function openPopup(a){

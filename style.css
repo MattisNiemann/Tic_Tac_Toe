@@ -112,5 +112,7 @@ h1{
 }
 .popup{
     width: 500px;
-}
+    height: 500px;
+    font-size: 150px;
 
+}
