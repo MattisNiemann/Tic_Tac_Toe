@@ -6,14 +6,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tic Tac Toe</title>
 </head>
-<body>
+<body onload=startGame()>
     <h1>Tic Tac Toe</h1>
     
     <dialog class="popup">
-        <button>
-            Close
-          </button>
-      <p><span class="winner" id="winner"></span> won!</p>  
+      <p><span class="winner" id="winner"></span> won!</p>
+      <button id="reload"onclick= restartGame()>Restart</button>  
     </dialog>
 
     <div id="grid">
@@ -29,8 +27,7 @@
     </div>
 
     <div id="buttons">
-        <button id="reload"onclick= location.reload()>Reload</button>
-        <button id="start"onclick= startGame()>Start</button>
+        <button></button>
     </div>
     <div id="borders">
         <div id="border1"class=buttons></div>

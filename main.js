@@ -2,6 +2,23 @@ let symbolPlaced = false;
 let gameRunning = false;
 let playerXTurn = false;
 let gameWon = false;
+
+
+
+// starting game
+function startGame() {
+  gameRunning = true;
+  gameWon = false;
+  grid.length = 0;
+  playerXTurn = false;
+  
+  for (let a=1;a<10;a++){
+    document.getElementById("cell" + (a )).innerHTML = "";
+  }
+  
+}
+
+
 let grid = [
   document.getElementById("cell1").innerHTML,
   document.getElementById("cell2").innerHTML,
@@ -13,6 +30,7 @@ let grid = [
   document.getElementById("cell8").innerHTML,
   document.getElementById("cell9").innerHTML,
 ];
+
 
 console.log(grid);
 
@@ -42,10 +60,6 @@ function setSymbol(a) {
       }
     }
     
-    // starting game
-    function startGame() {
-      gameRunning = true;
-    }
     
     function detctWin(){
       
@@ -122,3 +136,8 @@ function xWon(){
   
 }
 
+function restartGame(){
+  closePopup();
+  startGame();
+
+}
