@@ -117,23 +117,19 @@ function setSymbol(a) {
         xWon();
       }
 
-
+//detecting draw
 
 for (let a=0;a<10;a++){
-  if(
-
-    grid[a] == "x" || grid[a] == "o"
-    
-  )
+  if(grid[a] == "x" || grid[a] == "o")
+ {
+  console.log("no draw"+a)
+ }
+}
 }
 
 
 
-
-
-
-
-    }
+    
     
     
     function oWon(){
