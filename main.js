@@ -13,7 +13,7 @@ function startGame() {
   playerXTurn = false;
   
   for (let a=1;a<10;a++){
-    document.getElementById("cell" + (a )).innerHTML = "";
+    document.getElementById("cell" + (a)).innerHTML = "";
   }
   
 }
@@ -117,16 +117,15 @@ function setSymbol(a) {
         xWon();
       }
 
-//detecting draw
 
-for (let a=0;a<10;a++){
-  if(grid[a] == "x" || grid[a] == "o")
- {
-  console.log("no draw"+a)
  }
-}
-}
 
+
+function detectDraw(){
+  let grid2 = grid;
+
+  detctWin(grid2)
+}
 
 
     
