@@ -2,6 +2,7 @@ let symbolPlaced = false;
 let gameRunning = false;
 let playerXTurn = false;
 let gameWon = false;
+var detectingDraw;
 
 
 
@@ -45,6 +46,8 @@ function setSymbol(a) {
             grid[a] = "o";
             document.getElementById("cell" + (a + 1)).innerHTML = "o";
             detctWin();
+            detectDraw();
+
             playerXTurn = true;
             break;
             case true:
@@ -52,6 +55,7 @@ function setSymbol(a) {
               grid[a] = "x";
               document.getElementById("cell" + (a + 1)).innerHTML = "x";
               detctWin();
+              detectDraw();
               playerXTurn = false;
               break;
             }
@@ -118,17 +122,34 @@ function setSymbol(a) {
       }
 
 
+
+ }
+    
+
+
+ function detectDraw(){
+  var p=0;
+for  (var i=0;i<=9;i++){
+
+  if (grid[i] == "x" || grid[i] == "o" ){
+   p++;
+  }
+  
+}
+if(p>=9){Draw()}
+
  }
 
 
-function detectDraw(){
-  let grid2 = grid;
 
-  detctWin(grid2)
+ function Draw(){
+  console.log("draw");
+  gameWon = true;
+  gameRunning = false;
+  document.getElementById("winner").innerHTML= "no one";
+openPopup();
+  
 }
-
-
-    
     
     
     function oWon(){
@@ -137,15 +158,18 @@ function detectDraw(){
       gameRunning = false;
       document.getElementById("winner").innerHTML= "o";
   openPopup();
-}
+      }
+   
+
 
 function xWon(){
+
   console.log("x won");
   gameWon = true;
   gameRunning = false;
   document.getElementById("winner").innerHTML= "x";
   openPopup();
-  
+
 }
 
 function restartGame(){
